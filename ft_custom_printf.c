@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_convert.c                                       :+:      :+:    :+:   */
+/*   ft_costum_printf.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yohan <yohan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -63,13 +63,7 @@ int ft_customPrintf(const char *str, ...)
 
 int main (void)
 {
-    char *cum = "cum";
-    int milf = 0;
-    if (!milf)
-    {
-        ft_customPrintf("your mom makes me %s", cum);
-    }
-    /* char *memory = "hello world";
+    char *memory = "hello world";
     ft_customPrintf("your charracter: %c\n", 'c');
     printf("printf: %c\n\n", 'c');
     ft_customPrintf("your string: %s\n", "test 1");
@@ -97,6 +91,6 @@ int main (void)
     ft_customPrintf("your hex number: %x\n", 42);
     printf("printf: %x\n\n", 42);
     ft_customPrintf("your number: %p\n", memory);
-    printf("printf: %p\n\n", memory); */
+    printf("printf: %p\n\n", memory);
     return (0);
 }
