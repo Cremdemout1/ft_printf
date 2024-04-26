@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yohan <yohan@student.42.fr>                +#+  +:+       +#+         #
+#    By: ycantin <ycantin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/18 10:22:23 by yohan             #+#    #+#              #
-#    Updated: 2023/11/22 21:14:46 by yohan            ###   ########.fr        #
+#    Updated: 2024/04/26 16:58:48 by ycantin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,15 +16,14 @@ CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_customPrintf, ft_putnbr, ft_lowerHex, ft_UpperHex, /
-		ft_putDecValue, ft_printWholeAddress, ft_putchar, ft_putstr
-
+SRC = str ft_printf numbers
+SOURCE = $(SRC:=.o)
 all:$(NAME)
 
-$(NAME): $(SRC:=.o)
-			ar rc $(NAME) $(SRC:=.o)
+$(NAME): $(SOURCE)
+			ar rc $(NAME) $(SOURCE)
 clean:
-			$(RM)	$(SRC:=.o) $(BONUS:=.o)
+			$(RM)	$(SOURCE)
 fclean: clean
 			$(RM)	$(NAME)
 re:	fclean	$(NAME)
